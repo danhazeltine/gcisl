@@ -120,7 +120,7 @@ export const ReturnsEmail = (props: TransactionInfoProp) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {new Date().getFullYear()} {company.name}, All Rights Reserved{" "}
             <br />
-            408 Warren Rd - San Mateo, CA 94402
+            3 More London Riverside, London SE1 2RE, England
           </Text>
         </Section>
       </Body>
