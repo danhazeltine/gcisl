@@ -35,8 +35,8 @@ const Header = () => {
             className="font-bold text-3xl leading-[2.5rem] 
           sm:text-4xl sm:leading-[3rem] md:text-5xl md:leading-[4rem]"
           >
-            Make Global tranfer, Invest, Borrow and grow your money with{" "}
-            {company?.name}
+            Make Crypto Exchange, Invest, Borrow and grow your money with{" "}
+            {company?.name} All-In-One
           </h1>
 
           <h1 className="text-gray-200">
