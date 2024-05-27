@@ -167,14 +167,14 @@ const ManualCoinPaymentTransaction = (
       </div>
 
       <div className="flex flex-col gap-1">
-        <div>Don&apos;t have a wallet?</div>
+        <div>Don&apos;t have enough crypto coin?</div>
 
         <a
           className="animate__animated animate__headShake animate__infinite	infinite animate__fast"
           href="https://global.transak.com/"
           target="_blank"
         >
-          <Button outline label={"Buy Coin"} onClick={() => {}} />
+          <Button outline label={"Buy Crypto"} onClick={() => {}} />
         </a>
       </div>
     </>
