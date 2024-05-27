@@ -31,9 +31,9 @@ const AccountInactivityModal = (props: AccountInactivityModalProps) => {
       <div className="flex flex-col gap-3">
         <div>
           If you plan to change your country location after registration, please
-          note that your account will be temporarily inactive for a few months
-          during this transition. This measure ensures the security of your
-          account. You will regain access once the transition is complete.
+          note that your account will be temporarily inactive for 24 hours
+          during this process. This measure ensures the security of your
+          account. You will regain access once the process is complete.
         </div>
         <div className="flex gap-3">
           <Button
