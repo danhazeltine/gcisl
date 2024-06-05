@@ -58,15 +58,16 @@ export const CustomEmail = (props: TwitchResetPasswordEmailProps) => {
             ))}
 
             <Text style={paragraph}>
-              Still have questions? Please contact support
-              </Link>
+              Have questions? Please contact us.
             </Text>
 
             <Text style={paragraph}>
               Thanks,
               <br />
               {company.name} Support Team
-              support@gcisl.uk
+              <br />
+              Email: support@gcisl.com
+             
             </Text>
           </Section>
         </Container>
