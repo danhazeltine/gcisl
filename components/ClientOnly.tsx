@@ -44,17 +44,7 @@ const ClientOnly: React.FC<{
       {children}
 
 
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/66648adb9a809f19fb3b792a/1hvsbsre6';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+<script id="charla-hp-script"> window.addEventListener('load', () => { const a = document.createElement('charla-help-center'); a.setAttribute("p", "4787da6c-4678-4b68-9834-714fd500fe97"); const b = document.getElementById("charla-hp-script"); b.parentElement.insertBefore(a, b); const w = document.createElement('script'); w.src = 'https://app.getcharla.com/help-center/help-center.js'; document.body.appendChild(w); }) </script>
 
       
     </>
