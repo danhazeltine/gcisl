@@ -43,9 +43,7 @@ const ClientOnly: React.FC<{
     <>
       {children}
 
-
-<script id="charla-hp-script"> window.addEventListener('load', () => { const a = document.createElement('charla-help-center'); a.setAttribute("p", "4787da6c-4678-4b68-9834-714fd500fe97"); const b = document.getElementById("charla-hp-script"); b.parentElement.insertBefore(a, b); const w = document.createElement('script'); w.src = 'https://app.getcharla.com/help-center/help-center.js'; document.body.appendChild(w); }) </script>
-
+<script src="//code.tidio.co/wquxs7ot73fsswfacexommbo510qposh.js" async></script>
       
     </>
   );
