@@ -66,7 +66,7 @@ export const CustomEmail = (props: TwitchResetPasswordEmailProps) => {
               <br />
               {company.name} Support Team
               <br />
-              Email: support@gcisl.uk
+              Email: support@bridgeswiss.co.uk
              
             </Text>
           </Section>
@@ -76,7 +76,7 @@ export const CustomEmail = (props: TwitchResetPasswordEmailProps) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {updatedDate?.getFullYear()} {company.name}, All Rights Reserved{" "}
             <br />
-            3 More London Riverside, London SE1 2RE, England
+            85 Great Portland Street, First Floor, W1W 7LT, London, England.
           </Text>
         </Section>
       </Body>
