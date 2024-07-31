@@ -50,7 +50,7 @@ const Navbar = () => {
         className={`cursor-pointer text-base sm:text-lg 
          select-none font-semibold`}
       >
-        Spend
+        Account
       </div>
 
       <div
