@@ -51,7 +51,7 @@ const Spend = (props: SpendProps) => {
             className={`text-xs font-medium 
           ${mode === "light" ? "text-slate-700" : "text-white"}`}
           >
-            Account Balance
+            Available Balance
           </div>
 
           <div
