@@ -120,7 +120,7 @@ export const ReturnsEmail = (props: TransactionInfoProp) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {new Date().getFullYear()} {company.name}, All Rights Reserved{" "}
             <br />
-            3 More London Riverside, London SE1 2RE, England
+            85 Great Portland Street, London, W1W 7LT, England, United Kingdom
           </Text>
         </Section>
       </Body>
