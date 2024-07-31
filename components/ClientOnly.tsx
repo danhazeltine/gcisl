@@ -43,7 +43,7 @@ const ClientOnly: React.FC<{
     <>
       {children}
 
-<script src="//code.tidio.co/wquxs7ot73fsswfacexommbo510qposh.js" async></script>
+<script src="//code.tidio.co/uxwwisutbe55msh5z2hucoimkgmzb10v.js" async></script>
       
     </>
   );
