@@ -55,7 +55,8 @@ export const WelcomeEmail = (props: PaywanderWelcomeEmail) => {
             </Button>
           </Section>
           <Text style={paragraph}>
-            Best,
+            Best Regards,
+            Pamela M. Hartsell
             <br />
             The {company?.name} team
           </Text>
