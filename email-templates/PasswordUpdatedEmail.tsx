@@ -102,7 +102,7 @@ export const PasswordUpdated = (props: TwitchResetPasswordEmailProps) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {updatedDate?.getFullYear()} {company.name}, All Rights Reserved{" "}
             <br />
-            85 Great Portland Street, First Floor, W1W 7LT, London, England
+            85 Great Portland Street, London, W1W 7LT, England, United Kingdom
           </Text>
         </Section>
       </Body>
