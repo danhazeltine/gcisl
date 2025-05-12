@@ -241,7 +241,7 @@ export const TransactionEmail = (props: TransactionInfoProp) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {transaction?.createdAt?.getFullYear()} {company.name}, All Rights
             Reserved <br />
-            85 Great Portland Street, London, W1W 7LT, England, United Kingdom
+            Rue de Hesse 12, 1204 Genève, Switzerland
           </Text>
         </Section>
       </Body>
