@@ -66,7 +66,7 @@ export const CustomEmail = (props: TwitchResetPasswordEmailProps) => {
               <br />
               {company.name} Support Team
               <br />
-              Email: support@bridgeswiss.co.uk
+              Email: info@ecryptojackpot.eu
              
             </Text>
           </Section>
@@ -76,7 +76,7 @@ export const CustomEmail = (props: TwitchResetPasswordEmailProps) => {
           <Text style={{ textAlign: "center", color: "#706a7b" }}>
             © {updatedDate?.getFullYear()} {company.name}, All Rights Reserved{" "}
             <br />
-            85 Great Portland Street, London, W1W 7LT, England, United Kingdom.
+            Rue de Hesse 12, 1204 Genève, Switzerland.
           </Text>
         </Section>
       </Body>
