@@ -36,7 +36,7 @@ const Header = () => {
           sm:text-4xl sm:leading-[3rem] md:text-5xl md:leading-[4rem]"
           >
             Welcome to Europe Electronic Crypto Jackpot, the world’s most exciting free-to-enter cryptocurrency prize draw!
-            Participate in our global random draw for a chance to win massive crypto rewards – no purchase necessary.
+            Global random draw for a chance to win massive crypto rewards.
           </h1>
 
           <h1 className="text-gray-200">
