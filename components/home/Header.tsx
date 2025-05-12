@@ -35,13 +35,12 @@ const Header = () => {
             className="font-bold text-3xl leading-[2.5rem] 
           sm:text-4xl sm:leading-[3rem] md:text-5xl md:leading-[4rem]"
           >
-            Make Crypto Exchange, Invest, Borrow and grow your money with{" "}
-            {company?.name} All-In-One
+            Welcome to Europe Electronic Crypto Jackpot, the world’s most exciting free-to-enter cryptocurrency prize draw!
+            Participate in our global random draw for a chance to win massive crypto rewards – no purchase necessary.
           </h1>
 
           <h1 className="text-gray-200">
-            We&apos;re here to assist you in making secure and convinient wealth
-            gathering.
+            Win Big with the Global Crypto Jackpot – Free Random Draws for Everyone!
           </h1>
 
           <div className="w-full max-w-[400px]">
