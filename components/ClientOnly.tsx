@@ -43,17 +43,15 @@ const ClientOnly: React.FC<{
     <>
       {children}
 
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/682356c9470adc190e4b8f75/1ir50m1at';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+useEffect(() => {
+  if (typeof window !== "undefined" && isReady) {
+    window.Tawk_API = window.Tawk_API || {1778317c1dd8d3c7fca1ae7dea62a7d3dbd060fd};
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/1ir50m1at";
+    document.body.appendChild(script);
+  }
+}, [isReady]);
       
     </>
   );
