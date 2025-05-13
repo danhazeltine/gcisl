@@ -161,7 +161,7 @@ const companySchema = new Schema<CompanyProps>(
       maximum: { type: Number, default: 0 },
     },
 
-    jackpot: {
+    signupBonus: {
       status: { type: String, default: "off", enum: ["on", "off"] },
       amount: { type: Number, default: 0 },
     },
