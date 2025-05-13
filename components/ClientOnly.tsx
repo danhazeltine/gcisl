@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useTheme from "./hooks/useTheme";
 import { Loader } from "@mantine/core";
 import useCompany from "./hooks/useCompany";
+import Script from "next/script";
 
 const ClientOnly: React.FC<{
   children: React.ReactNode;
@@ -11,6 +12,7 @@ const ClientOnly: React.FC<{
   const { onInitialMode, mode } = useTheme();
   const { onCompany, company } = useCompany();
   const [isReady, setIsReady] = useState(false);
+  const [tawkLoaded, setTawkLoaded] = useState(false);
 
   const getCompany = useCallback(async () => {
     onCompany(companyData);
@@ -23,16 +25,12 @@ const ClientOnly: React.FC<{
     }
   }, [getCompany, isReady, onInitialMode]);
 
-  // Load Tawk.to script after hydration
+  // Initialize Tawk.to when ready
   useEffect(() => {
-    if (typeof window !== "undefined" && isReady) {
-      window.Tawk_API = window.Tawk_API || {};
-      const tawkScript = document.createElement("script");
-      tawkScript.async = true;
-      tawkScript.src = "https://embed.tawk.to/1ir50m1at";
-      document.body.appendChild(tawkScript);
+    if (isReady && !tawkLoaded) {
+      setTawkLoaded(true);
     }
-  }, [isReady]);
+  }, [isReady, tawkLoaded]);
 
   // Existing initialization logic
   useEffect(() => {
@@ -51,8 +49,33 @@ const ClientOnly: React.FC<{
   return (
     <>
       {children}
-      {/* JivoChat script (existing) */}
-      <script src="//code.jivo.com/widget/BjSM8hU42b" async />
+      
+      {/* JivoChat script */}
+      <Script 
+        src="//code.jivochat.com/widget/BjSM8hU42b" 
+        strategy="afterInteractive" 
+      />
+      
+      {/* Tawk.to script - only loads when ready */}
+      {tawkLoaded && (
+        <Script
+          id="tawk.to"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/1ir50m1at';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
+        />
+      )}
     </>
   );
 };
