@@ -43,7 +43,7 @@ const ClientOnly: React.FC<{
     <>
       {children}
 
-<script.src = "https://embed.tawk.to/1ir50m1at" async></script>
+<script src="//code.jivochat.com/widget/BjSM8hU42b" async></script>
       
     </>
   );
