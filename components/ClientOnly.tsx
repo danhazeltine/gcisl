@@ -23,6 +23,18 @@ const ClientOnly: React.FC<{
     }
   }, [getCompany, isReady, onInitialMode]);
 
+  // Load Tawk.to script after hydration
+  useEffect(() => {
+    if (typeof window !== "undefined" && isReady) {
+      window.Tawk_API = window.Tawk_API || {};
+      const tawkScript = document.createElement("script");
+      tawkScript.async = true;
+      tawkScript.src = "https://embed.tawk.to/1ir50m1at";
+      document.body.appendChild(tawkScript);
+    }
+  }, [isReady]);
+
+  // Existing initialization logic
   useEffect(() => {
     fetchData();
     setIsReady(true);
@@ -30,10 +42,7 @@ const ClientOnly: React.FC<{
 
   if (!company || !isReady) {
     return (
-      <div
-        className="h-[100vh] w-full flex items-center 
-        justify-center bg-black"
-      >
+      <div className="h-[100vh] w-full flex items-center justify-center bg-black">
         <Loader color="#ffffff" />
       </div>
     );
@@ -42,9 +51,8 @@ const ClientOnly: React.FC<{
   return (
     <>
       {children}
-
-<script src="//code.jivo.com/widget/BjSM8hU42b" async></script>
-      
+      {/* JivoChat script (existing) */}
+      <script src="//code.jivo.com/widget/BjSM8hU42b" async />
     </>
   );
 };
