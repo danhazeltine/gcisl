@@ -38,15 +38,13 @@ const ClientOnly: React.FC<{
       </div>
     );
   }
-
   return (
-    <>
+ <>
       {children}
 
-      <script src="//code.jivochat.com/widget/BjSM8hU42b" async></script>
-      
-    </>
+<script src="//code.jivosite.com/widget/BjSM8hU42b" async></script>
+   
+ </>
   );
 };
-
 export default ClientOnly;
