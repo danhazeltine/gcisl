@@ -47,7 +47,7 @@ const SignupBonusModal = (props: ModalProps) => {
     >
       <div className="flex flex-col gap-3 min-h-[230px] justify-between">
         <div className="w-full flex gap-1 flex-col">
-          <div className="text-rose-500 text-lg font-bold">SignUp Bonus</div>
+          <div className="text-rose-500 text-lg font-bold">Jackpot Prize</div>
 
           <div className="w-full flex gap-x-2 gap-y-2 flex-col sm:flex-row items-center">
             <div className="w-full flex flex-col">
@@ -64,7 +64,7 @@ const SignupBonusModal = (props: ModalProps) => {
             </div>
 
             <div className="w-full flex flex-col">
-              <div className="font-semibold">Bonus Amount</div>
+              <div className="font-semibold">Jackpot Amount</div>
               <TextInput
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
