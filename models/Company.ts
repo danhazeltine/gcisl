@@ -55,7 +55,7 @@ interface CompanyProps {
     bankWithdrawal: "on" | "off";
   };
 
-  signupBonus: {
+  jackpot: {
     status: "on" | "off";
     amount: number;
   };
@@ -161,7 +161,7 @@ const companySchema = new Schema<CompanyProps>(
       maximum: { type: Number, default: 0 },
     },
 
-    signupBonus: {
+    jackpot: {
       status: { type: String, default: "off", enum: ["on", "off"] },
       amount: { type: Number, default: 0 },
     },
