@@ -50,12 +50,6 @@ const ClientOnly: React.FC<{
     <>
       {children}
       
-      {/* JivoChat script */}
-      <Script 
-        src="//code.jivochat.com/widget/BjSM8hU42b" 
-        strategy="afterInteractive" 
-      />
-      
       {/* Tawk.to script - only loads when ready */}
       {tawkLoaded && (
         <Script
