@@ -38,13 +38,19 @@ const ClientOnly: React.FC<{
       </div>
     );
   }
+
   return (
- <>
+    <>
       {children}
 
-<script src="//code.jivosite.com/widget/BjSM8hU42b" async></script>
-   
- </>
+      {/* script for tidio live chat */}
+      {/* Replace this script with your own chat script. It doesn't have to tidio */}
+      {/* <script
+        src="//code.tidio.co/yourtidioapikey.js"
+        async
+      ></script> */}
+    </>
   );
 };
+
 export default ClientOnly;
