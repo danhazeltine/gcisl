@@ -12,7 +12,6 @@ const ClientOnly: React.FC<{
   const { onInitialMode, mode } = useTheme();
   const { onCompany, company } = useCompany();
   const [isReady, setIsReady] = useState(false);
-  const [tawkLoaded, setTawkLoaded] = useState(false);
 
   const getCompany = useCallback(async () => {
     onCompany(companyData);
@@ -25,14 +24,6 @@ const ClientOnly: React.FC<{
     }
   }, [getCompany, isReady, onInitialMode]);
 
-  // Initialize Tawk.to when ready
-  useEffect(() => {
-    if (isReady && !tawkLoaded) {
-      setTawkLoaded(true);
-    }
-  }, [isReady, tawkLoaded]);
-
-  // Existing initialization logic
   useEffect(() => {
     fetchData();
     setIsReady(true);
@@ -50,26 +41,40 @@ const ClientOnly: React.FC<{
     <>
       {children}
       
-      {/* Tawk.to script - only loads when ready */}
-      {tawkLoaded && (
-        <Script
-          id="tawk.to"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-              (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/1ir50m1at';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-              })();
-            `,
-          }}
-        />
-      )}
+      {/* JivoChat - loaded after hydration */}
+      <Script 
+        src="//code.jivochat.com/widget/BjSM8hU42b"
+        strategy="afterInteractive"
+      />
+      
+      {/* Tawk.to with API Key - loaded after hydration */}
+      <Script
+        id="tawk-to-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.Tawk_API = window.Tawk_API || {};
+            window.Tawk_API.visitor = {
+              name: '${companyData.name || 'Visitor'}',
+              email: '${companyData.email || ''}',
+              hash: '${companyData.id || ''}'
+            };
+            
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/1ir50m1at/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s1.setAttribute('data-api-key', '1778317c1dd8d3c7fca1ae7dea62a7d3dbd060fd');
+            s0.parentNode.insertBefore(s1, s0);
+            
+            window.Tawk_API.onLoad = function() {
+              console.log('Tawk.to loaded successfully');
+            };
+          `
+        }}
+      />
     </>
   );
 };
