@@ -43,15 +43,7 @@ const ClientOnly: React.FC<{
     <>
       {children}
 
-useEffect(() => {
-  if (typeof window !== "undefined" && isReady) {
-    window.Tawk_API = window.Tawk_API || {1778317c1dd8d3c7fca1ae7dea62a7d3dbd060fd};
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://embed.tawk.to/1ir50m1at";
-    document.body.appendChild(script);
-  }
-}, [isReady]);
+<script.src = "https://embed.tawk.to/1ir50m1at" async></script>
       
     </>
   );
