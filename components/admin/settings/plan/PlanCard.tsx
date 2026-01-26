@@ -33,7 +33,7 @@ const PlanCard = (props: PlanCardProps) => {
     id,
   } = props;
   const router = useRouter();
-  const date = new Date(`${createdAt}`);
+  const date = createdAt ? new Date(`${createdAt}`) : null;
 
   const { company } = useCompany();
   const primaryLightColor = company?.color.primaryLight;
@@ -104,7 +104,7 @@ const PlanCard = (props: PlanCardProps) => {
 
         <div className="flex justify-start items-center gap-1 w-full">
           <div className="text-sm">Created At:</div>
-          <div className="font-bold">{formatDate(date)}</div>
+          <div className="font-bold">{date ? formatDate(date) : 'N/A'}</div>
         </div>
       </div>
 
