@@ -1,5 +1,5 @@
 // import formatNumber from "@/constants/formatNumber";
-import formatNumber from "../constants/formatNumber";
+import formatNumber from "@/constants/formatNumber";
 import {
   Body,
   Container,
