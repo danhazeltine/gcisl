@@ -55,6 +55,11 @@ interface CompanyProps {
     bankWithdrawal: "on" | "off";
   };
 
+  signupBonus: {
+    status: "on" | "off";
+    amount: number;
+  };
+
   jackpot: {
     status: "on" | "off";
     amount: number;
@@ -159,9 +164,16 @@ const companySchema = new Schema<CompanyProps>(
     withdraw: {
       minimum: { type: Number, default: 0 },
       maximum: { type: Number, default: 0 },
+      coinWithdrawal: { type: String, default: "off", enum: ["on", "off"] },
+      bankWithdrawal: { type: String, default: "off", enum: ["on", "off"] },
     },
 
     signupBonus: {
+      status: { type: String, default: "off", enum: ["on", "off"] },
+      amount: { type: Number, default: 0 },
+    },
+
+    jackpot: {
       status: { type: String, default: "off", enum: ["on", "off"] },
       amount: { type: Number, default: 0 },
     },
