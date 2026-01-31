@@ -1,45 +1,10 @@
-"use client";
-import Footer from "@/components/home/Footer";
-import Header from "@/components/home/Header";
-import { useSession } from "next-auth/react";
-import { redirect, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { Loader } from "@mantine/core";
-
-const Home = () => {
-  const { data: session } = useSession();
-  const router = useRouter();
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    session?.user && redirect("/home");
-    // !session?.user && redirect("/login");
-
-    timer = setTimeout(() => {
-      setIsReady(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [session?.user]);
-
-  if (!isReady) {
-    return (
-      <div
-        className="h-[100vh] w-full flex items-center
-        justify-center bg-black"
-      >
-        <Loader color="#ffffff" />
-      </div>
-    );
-  }
-
+export default function Home() {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  );
-};
-
-export default Home;
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold">Welcome to Next.js</h1>
+        <p className="mt-4 text-gray-600">Get started by editing this page</p>
+      </div>
+    </main>
+  )
+}
